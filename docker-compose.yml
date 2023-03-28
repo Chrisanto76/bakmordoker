@@ -1,0 +1,12 @@
+## Fichier : docker-compose.yml
+version: '3'
+services:
+  tic-tac:
+    container_name: tic-tac
+    build: .
+    ports:
+      - "3000:3000"
+    # stdin_open: true
+    volumes:
+       - .:/usr/src/app/my-app
+       - /usr/src/app/my-app/node_modules
